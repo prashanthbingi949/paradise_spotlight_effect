@@ -1,1 +1,84 @@
-test
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#050505" />
+  <title>Warrior — Hover Reveal Hero</title>
+  <link rel="preload" as="image" href="assets/Warrior_Image.jpg" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="site-shell">
+    <header class="site-header" aria-label="Primary navigation">
+      <a class="brand" href="#home" aria-label="Home">
+        <span class="brand-mark">W</span>
+        <span class="brand-name">WARRIOR</span>
+      </a>
+      <button class="menu-toggle" type="button" aria-label="Open menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+      <nav class="nav" aria-label="Main menu">
+        <a class="nav-link active" href="#home">Home</a>
+        <a class="nav-link" href="#story">Story</a>
+        <a class="nav-link" href="#work">Work</a>
+        <a class="nav-link" href="#contact">Let's Talk</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="hero" id="home" aria-label="Interactive warrior hero">
+        <div class="hero-image hero-image--dark" aria-hidden="true"></div>
+        <div class="hero-vignette" aria-hidden="true"></div>
+
+        <div class="reveal-layer" aria-hidden="true">
+          <div class="hero-image hero-image--reveal"></div>
+          <div class="hero-vignette hero-vignette--reveal"></div>
+          <div class="hero-content hero-content--reveal">
+            <p class="eyebrow">THE REVEAL EXPERIENCE</p>
+            <h1>FEARLESS<br><span>BY DESIGN.</span></h1>
+            <p class="hero-copy">Move your cursor across the screen and reveal the detail hidden in the darkness.</p>
+            <div class="hero-actions">
+              <span class="button button--primary">Explore</span>
+              <span class="button button--ghost">Let's Talk</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="hero-content hero-content--base" aria-hidden="true">
+          <p class="eyebrow">THE REVEAL EXPERIENCE</p>
+          <h1>FEARLESS<br><span>BY DESIGN.</span></h1>
+          <p class="hero-copy">Move your cursor across the screen and reveal the detail hidden in the darkness.</p>
+          <div class="hero-actions">
+            <a class="button button--primary" href="#story">Explore</a>
+            <a class="button button--ghost" href="#contact">Let's Talk</a>
+          </div>
+        </div>
+
+        <div class="hero-hint">
+          <span class="hint-dot"></span>
+          MOVE TO REVEAL
+        </div>
+        <div class="hero-bottom">
+          <span>SCROLL TO DISCOVER</span>
+          <span class="line"></span>
+          <span>01 / 03</span>
+        </div>
+      </section>
+
+      <section class="info-section" id="story">
+        <p class="section-kicker">THE EXPERIENCE</p>
+        <h2>A cinematic hero without a paid animation library.</h2>
+        <p>This section is intentionally lightweight: the reveal is powered by CSS masks and a tiny JavaScript pointer handler, so it can be deployed as a normal static site.</p>
+      </section>
+
+      <section class="info-grid" id="work">
+        <article class="info-card"><span>01</span><h3>Hover Reveal</h3><p>Soft spotlight follows the cursor in real time.</p></article>
+        <article class="info-card"><span>02</span><h3>Responsive</h3><p>Touch devices use a reveal point that follows your finger.</p></article>
+        <article class="info-card" id="contact"><span>03</span><h3>Free Hosting</h3><p>Works with GitHub Pages, Netlify, or Vercel using static files.</p></article>
+      </section>
+    </main>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
